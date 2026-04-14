@@ -1,15 +1,11 @@
-data,canal,tema,resumo,resolvido
-2006-03-01,reuniao,Contrato Real Madrid,Jogador recusou contrato aos 14 anos após testes na Espanha,sim
-2010-08-23,coletiva,Contrato Chelsea,Santos e Neymar anunciaram a recusa da proposta de 30M de euros,sim
-2011-06-15,reuniao,Contrato Real Madrid, Recusou proposta,sim
-2011-11-09,reuniao,Renovação Santos,Extensão do vínculo para garantir a permanência até a Copa de 2014,sim
-2013-05-25,anuncio,Transferência Barcelona,Fechamento de contrato histórico,sim
-2016-06-15,reuniao,Contrato Man. United,Recusou oferta da Premier League,sim
-2016-07-01,reuniao,Renovação Barcelona,Extensão de contrato após conquista da Champions League,sim
-2017-08-03,notificacao,Transferência PSG,Decidiu aceitar o projeto do PSG apos busca por protagonismo e divergencias no Barca,sim
-2019-08-30,reuniao,Contrato Barcelona,PSG recusou propostas de retorno do atleta ao Barcelona,sim
-2021-05-01,reuniao,Renovação PSG,Extensão do vínculo em Paris por mais quatro temporadas,sim
-2022-07-01,reuniao,Contrato Newcastle,Priorizou a permanencia na Franca e recusou investida do projeto ingles,sim
-2023-08-15,anuncio,Transferência Al-Hilal,Aceitou proposta recorde apos PSG sinalizar fim de ciclo e mudanca de projeto,sim
-2025-12-20,anuncio, Fim de Contrato, Al-Hilal optou pelo encerramento devido ao historico de lesao e longo tempo de recuperacao, sim
-2025-01-01,reuniao,Contrato Santos,Reunião de acerto para volta so Santos ,sim
+data,categoria,evento,resumo,resolvido,contexto_ia
+2006-03-01,MERCADO,Recusa Real Madrid,Jogador recusou contrato aos 14 anos após testes na Espanha,sim,Fidelidade ao Santos para maturação técnica no Brasil.
+2010-08-23,NEGOCIACAO,Recusa Chelsea,Santos e Neymar recusam proposta de 30M de euros,sim,Decisão estratégica para conquistar títulos na América antes da Europa.
+2011-06-15,NEGOCIACAO,Recusa Real Madrid,Jogador recusa nova investida do clube espanhol,sim,Foco total na disputa do Mundial de Clubes pelo Santos.
+2011-11-09,RENOVACAO,Extensão Santos,Renovação para garantir permanência até a Copa de 2014,sim,Consolidação como maior ídolo nacional pós-Pelé.
+2013-05-25,TRANSFERENCIA,Ida ao Barcelona,Fechamento de contrato histórico com o clube catalão,sim,Início da fase de auge internacional e parceria com Messi.
+2016-07-01,RENOVACAO,Renovação Barcelona,Extensão de contrato após conquista da Champions League,sim,Manutenção do domínio europeu e estabilidade no trio MSN.
+2017-08-03,TRANSFERENCIA,Ida ao PSG,Quebra de cláusula recorde de 222M de euros,sim,Busca por protagonismo absoluto e tentativa de ser o melhor do mundo.
+2019-08-30,NEGOCIACAO,Tentativa Retorno,PSG recusou propostas de retorno ao Barcelona,sim,Início de desgaste com o projeto francês e busca por ambiente conhecido.
+2023-08-15,TRANSFERENCIA,Ida ao Al-Hilal,Aceitou proposta recorde após PSG sinalizar fim de ciclo,sim,Transição para mercado árabe após sequência de lesões na Europa.
+2025-01-01,RETORNO,Volta ao Santos,Reunião de acerto para retorno ao clube de origem,sim,Projeto estratégico visando a preparação física para a Copa 2026.
