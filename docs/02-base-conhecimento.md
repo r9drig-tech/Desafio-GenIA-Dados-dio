@@ -6,13 +6,14 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV |Registra o histórico de negociações, reuniões e "atendimentos" da carreira (Renovações e Recusas) |
-| `carreira.json` | JSON | Contém os fatos detalhados de cada clube (Gols, Assistências, Títulos)s |
-| `premio.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisa a evolução financeira (Salários, Multas Rescisórias e Valor de Mercado) |
+| `historico_atendimento.csv` | CSV |Registra o log cronológico de negociações, renovações e propostas recusadas |
+| `carreira.json` | JSON | Contém a volumetria técnica: gols (falta, pênalti, campo), assistências e títulos por clube |
+| `premio.json` | JSON | Dados de scouting: origem dos gols de falta (esquerda, centro, direita) e histórico médico |
+| `transacoes.csv` | CSV | Analisa a evolução financeira: salários por período, multas rescisórias e valor de mercado (Market Value) |
 
 > [!TIP]
-> **Diferencial Estratégico**: O uso de arquivos separados permite que o Agente de IA diferencie o que é desempenho esportivo (JSON) do que é gestão de negócios (CSV)
+> **Diferencial Estratégico**: Essa separação permite que o Agente diferencie valor de mercado (transacoes.csv) de eficiência técnica (carreira.json),
+evitando confusão entre custos de transferência e desempenho em campo
 
 ---
 
@@ -20,10 +21,11 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-Os dados originais foram expandidos para incluir camadas de profundidade que não costumam aparecer em datasets comuns:
-Log de Recusas: Inclusão de propostas negadas (Real Madrid, Chelsea, Newcastle) para mapear o poder de negociação.
-Motivação de Trocas: Diferenciação entre saídas por protagonismo (PSG 2017) e saídas por fim de ciclo/lesão (Al-Hilal 2025).
-Histórico de Base: Dados financeiros desde 2004 (Santos) para análise de valorização a longo prazo.
+Os dados originais foram expandidos para garantir que o AgentBot atue como um analista de elite:
+- Mapeamento de Faltas: Inclusão da lateralidade dos gols de falta (setores esquerdo, central e direito) para análise de precisão.
+- Log de Decisões: Registro de propostas negadas (Real Madrid, Newcastle) para contextualizar a estratégia de carreira "Brasil -> Europa -> Ásia".
+- Métrica de Saúde: Inclusão de um histórico de lesões correlacionado com o tempo de inatividade, explicando a transição de valores entre PSG e Al-Hilal.
+- Retroatividade: Dados financeiros e contratuais consolidados desde o primeiro contrato profissional em 2009
 
 ---
 
@@ -32,14 +34,15 @@ Histórico de Base: Dados financeiros desde 2004 (Santos) para análise de valor
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-Os arquivos são processados utilizando a biblioteca Pandas (para os CSVs) e o módulo JSON nativo do Python. 
-Eles são carregados na memória no início da execução do Dashboard Streamlit e transformados em DataFrames para consulta rápida.
+O sistema utiliza a biblioteca Pandas para a manipulação dos CSVs e o módulo JSON para os arquivos de performance. 
+No ambiente Streamlit, esses dados são carregados em cache para garantir que a consulta aos marcos da carreira seja instantânea
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-O agente utiliza uma técnica de Context Injection. Quando o usuário faz uma pergunta, o sistema filtra as linhas relevantes da carreira e as injeta no contexto como uma "Memória de Curto Prazo", 
-permitindo que a resposta seja baseada em fatos e não apenas em conhecimento genérico do modelo.
+O agente utiliza Context Injection baseado em HTTP (simulado via requisições locais ou API). 
+Ao receber uma pergunta, o AgentBot busca nos arquivos apenas as "fatias" de dados relevantes (ex: apenas a linha do Santos se a pergunta for sobre 2011) e as injeta no prompt como fatos imutáveis. 
+Isso impede que o modelo "alucine" números de gols ou valores de salários.
 
 ---
 
@@ -48,17 +51,36 @@ permitindo que a resposta seja baseada em fatos e não apenas em conhecimento ge
 > Mostre um exemplo de como os dados são formatados para o agente.
 
 ```
-Contexto de Negociações (CSV):
-- Data: 2010-08-23 | Tema: Contrato Chelsea | Status: Recusado
-- Resumo: Santos e Neymar anunciaram a recusa da proposta de 30M de euros para focar no projeto nacional.
+[DADOS TÉCNICOS: SANTOS FC (2009-2013)]
+- Performance: 138 Gols | 65 Assistências
+- Finalização: Perna Dir: 110 | Perna Esq: 18 | Faltas: 5 | Pênaltis: 22
+- Eficiência: Dribles Certos: 82% | Passes Certos: 79%
+- Disciplina: 220 Jogos Titular | 58 Cartões Amarelos | 3 Vermelhos
+- Conquistas Coletivas: Copa Libertadores (2011)
+                        Copa do Brasil (2010)
+                        Recopa Sul-Americana (2012)
+                        Tricampeonato Paulista (2010, 2011, 2012)
+- Prêmios Individuais:  FIFA Puskás Award (2011)
+                        Rei da América (2011, 2012)
+                        Artilheiro do Campeonato Paulista (2012 - 20 gols)
 
-Histórico de Transações:
-- Tipo: Saída (Barcelona -> PSG)
-- Valor: 222.000.000,00
-- Categoria: Transferência (Multa Rescisória)
+> [HISTÓRICO MÉDICO DETALHADO]
+- Total de Lesões no Período: 4 registros
+- Tempo Total Afastado: 62 dias
+- Eventos Notáveis: Pelve (2010): 5 dias
+                    Tornozelo (2011): 15 dias
+                    Lesão Muscular (2012): 10 dias
+                    Tornozelo (2013): 32 dias
 
-Perfil Atual:
-- Clube: Santos
-- Status: Projeto de Recomeço após lesão no Al-Hilal.
+[HISTÓRICO FINANCEIRO / MERCADO]
+- Evento de Negociação: Recusa ao Real Madrid (2011).
+- Valor de Mercado na Época: 45M Euros.
+- Justificativa: Extensão contratual para foco no projeto nacional (Libertadores/Mundial).
+
+[STATUS ATUAL]
+- Atividade: Titular absoluto e capitão, atuando em alta intensidade.
+- Condição Física: 100% (Livre de lesões e restrições médicas).
+- Foco Estratégico: Preparação integral para a Copa do Mundo 2026.
+- Situação Contratual: Estabilizada, priorizando ritmo de jogo e performance técnica.
 ...
 ```
