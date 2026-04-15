@@ -1,9 +1,21 @@
 # Base de Conhecimento
 
+
+> [!TIP]
+> **Prompt usando para etapa:**
+> 
+> Preciso organizar a base de conhecimento do meu agente analitico da carreira do Neymar Jr.
+> Tenho estes arquivos de dados: [liste os arquivos],
+> Ajude me:
+> (1)entender o que cada arquivo contém,
+> (2) decidir como analisar cada um,
+> (3) criar um exemplo de contexto formatado para incluir no prompt.
+
+
 ## Dados Utilizados
 
 
-| Arquivo | Formato | Utilização no Agente |
+| Arquivo | Formato | Pra que serve AgentBot |
 |---------|---------|---------------------|
 | `historico_atendimento.csv` | CSV |Registra o log cronológico de negociações, renovações e propostas recusadas |
 | `Carreira e Lesões.json` | JSON | Contém a volumetria técnica: gols (falta, pênalti, campo), assistências e histórico médico |
@@ -474,12 +486,11 @@ SANTOS FC (2009-2013)
 [HISTÓRICO MERCADO DE TRANSFERENCIA]
 - Evento de Negociação: Recusa ao Real Madrid (2011).
 - Valor de Mercado na Época: 45M Euros.
-- Justificativa: Extensão contratual para foco no projeto nacional (Libertadores/Mundial).
+- Justificativa: Essa decisão permitiu a conquista de títulos continentais antes de sua transferência para o FC Barcelona em 2013.
 
 [STATUS ATUAL]
 - Atividade: Titular absoluto e capitão, atuando em alta intensidade.
 - Condição Física: 100% (Livre de lesões e restrições médicas).
 - Foco Estratégico: Preparação integral para a Copa do Mundo 2026.
 - Situação Contratual: Estabilizada, priorizando ritmo de jogo e performance técnica.
-...
 ```
