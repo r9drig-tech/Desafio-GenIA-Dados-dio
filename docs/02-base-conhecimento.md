@@ -434,8 +434,12 @@ PREMIO E TITULOS:(Prêmio e Títulos.json)
 ## Exemplo de Contexto Montado
 
 > Mostre um exemplo de como os dados são formatados para o agente.
-Nota Técnica: Este é o formato final dos dados após o processamento do Python, pronto para ser injetado no prompt.
-Ele consolida informações de quatro fontes diferentes (Técnico, Médico, Mercado de Transferencia e Status).
+
+O exemplo de contexto montado abaixo baseia-se nos dados originais da base de conhecimento, sintetizando-os para manter apenas as informações mais relevantes. 
+Isso otimiza o consumo de tokens, garantindo que o agente tenha o contexto necessário para uma resposta precisa.
+
+Nota Técnica: Este é o formato final dos dados após o processamento do Python, pronto para ser injetado no prompt. Ele consolida informações de quatro fontes diferentes (Técnico, Médico, Mercado de Transferência e Status).
+        
 ```
 [DADOS TÉCNICOS]
 SANTOS FC (2009-2013)
