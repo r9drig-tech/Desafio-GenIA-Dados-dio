@@ -1,4 +1,4 @@
-# 🤖 AgentBot Analytics Neymar Jr. Career: Agente Inteligente com IA Generativa
+# 🤖 AgentBot Analytics: Consultor Neymar Jr. Career
 
 ## Contexto
 
@@ -197,7 +197,7 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 
 | Categoria | Ferramentas |
 |-----------|-------------|
-| **LLMs** | Gemini](https://gemini.google.com/), [Ollama](https://ollama.ai/) |
+| **LLMs** | [Ollama](https://ollama.ai/) |
 | **Desenvolvimento** | [Streamlit](https://streamlit.io/), |
 | **Orquestração** | [LangChain](https://www.langchain.com/) |
 | **Diagramas** | [Mermaid](https://mermaid.js.org/)|
