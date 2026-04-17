@@ -1,5 +1,13 @@
 # Avaliação e Métricas
 
+> [!TIP]
+> **Prompt usado para esta etapa:**
+> 
+> Crie um plano de avaliação pro agente "AgentBot Analytics" com 3 métricas: assertividade, segurança e coerência. Inclua 4 cenários de teste e um formulário simples de feedback. Preencha o template abaixo.
+>
+> [cole ou anexe o template `04-metricas.md` pra contexto]
+
+
 ## Como Avaliar seu Agente
 
 A avaliação pode ser feita de duas formas complementares:
@@ -18,7 +26,7 @@ A avaliação pode ser feita de duas formas complementares:
 | **Coerência** | O tom de voz foi técnico e direto? | Avaliar se a resposta contém análise estatística ou apenas texto |
 
 > [!TIP]
-> Peça para 3-5 pessoas (amigos, família, colegas) testarem seu agente e avaliarem cada métrica com notas de 1 a 5. Isso torna suas métricas mais confiáveis! Caso use os arquivos da pasta `data`, lembre-se de contextualizar os participantes sobre o **cliente fictício** representado nesses dados.
+Peça para 3-5 pessoas (colegas de bootcamp ou amigos que acompanham futebol) testarem seu agente e avaliarem cada métrica com notas de 1 a 5. Como o projeto utiliza dados reais da carreira do Neymar Jr. extraídos de arquivos JSON e CSV, peça para os testadores focarem em perguntas difíceis para "pegar" o bot em contradição (ex: perguntar de clubes onde ele não jogou ou pedir a média exata de gols por clube).
 
 ---
 
@@ -48,9 +56,21 @@ Crie testes simples para validar seu agente: Utilizei os dados da pasta `data` p
 
 ---
 
-## Resultados
+## Formulário de Feedback (Sugestão)
 
-Após os testes, registre suas conclusões:
+Use com os participantes do teste:
+
+| Métrica | Pergunta | Nota (1-5) |
+|---------|----------|------------|
+| Assertividade | "A separação dos gols (falta, pênalti e campo) funcionou perfeitamente, com a IA respeitando a lateralidade das cobranças?" | ___ |
+| Segurança | "O filtro de privacidade barrou com sucesso perguntas sobre a vida pessoal?" | ___ |
+| Coerência | "A latência de resposta usando o cache do Streamlit foi quase instantânea?" | ___ |
+
+**Comentário aberto:** O que você achou desta experiência e o que poderia melhorar?
+
+---
+
+## Resultados
 
 **O que funcionou bem:**
 - A separação dos gols (falta, pênalti e campo) funcionou perfeitamente, com a IA respeitando a lateralidade das cobranças.
@@ -70,5 +90,3 @@ Para quem quer explorar mais, algumas métricas técnicas de observabilidade tam
 - Latência e tempo de resposta;
 - Consumo de tokens e custos;
 - Logs e taxa de erros.
-
-Ferramentas especializadas em LLMs, como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/), são exemplos que podem ajudar nesse monitoramento. Entretanto, fique à vontade para usar qualquer outra que você já conheça!
