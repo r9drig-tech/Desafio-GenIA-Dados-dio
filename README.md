@@ -4,11 +4,11 @@
 
 ## 📌 Visão Geral
 
->Diferente de assistentes genéricos, este agente baseia-se em uma Base de Conhecimento Proprietária estruturada via Python. O foco principal foi a Engenharia do Dado: garantir que métricas de desempenho, histórico de lesões e títulos estivessem limpos e segmentados para evitar alucinações da IA.
+> Diferente de assistentes genéricos, este agente baseia-se em uma Base de Conhecimento Proprietária estruturada via Python. O foco principal foi a Engenharia do Dado: garantir que métricas de desempenho, histórico de lesões e títulos estivessem limpos e segmentados para evitar alucinações da IA.
 
 ## 🏗️ Arquitetura e Estrutura do Repositório
 
->O projeto foi organizado seguindo as melhores práticas de desenvolvimento, separando a camada de dados da camada de documentação técnica:
+> O projeto foi organizado seguindo as melhores práticas de desenvolvimento, separando a camada de dados da camada de documentação técnica:
 
 ## 📁 Estrutura do Projeto
 
@@ -38,10 +38,10 @@ _
 ## 🛠️ Destaques Técnicos & Implementação
 Para entregar um consultor de alta fidelidade, foram aplicadas as seguintes camadas:
 
-Granularidade de Dados Técnicos: Tratamento específico para métricas de passes, cruzamentos, faltas, gols de falta e dribles, organizados por clube.
-Segmentação de Títulos: Lógica personalizada para distinguir e contar conquistas de peso como Mundial de Clubes e Libertadores de forma individualizada.
-Inteligência Clínica: Mapeamento do histórico médico cruzado com a performance em campo (média de gols/jogos).
-RAG (Retrieval-Augmented Generation): O agente consulta as bases JSON/CSV antes de responder, garantindo precisão histórica.
+- Granularidade de Dados Técnicos: Tratamento específico para métricas de passes, cruzamentos, faltas, gols de falta e dribles, organizados por clube.
+- Segmentação de Títulos: Lógica personalizada para distinguir e contar conquistas de peso como Mundial de Clubes e Libertadores de forma individualizada.
+- Inteligência Clínica: Mapeamento do histórico médico cruzado com a performance em campo (média de gols/jogos).
+- RAG (Retrieval-Augmented Generation): O agente consulta as bases JSON/CSV antes de responder, garantindo precisão histórica.
 
 ### 1. Instalar Ollama
 
