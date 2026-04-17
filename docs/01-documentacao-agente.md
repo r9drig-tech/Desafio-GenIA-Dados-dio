@@ -1,43 +1,39 @@
 # Documentação do Agente
 
+
 ## Caso de Uso
-
 ### Problema
-> Qual problema financeiro seu agente resolve?
 
-A dificuldade de investidores iniciantes e intermediários em entenderem sua própria saúde financeira e conceitos do mercado. Muitos possuem dados (extratos e carteiras), mas não sabem interpretá-los para tomar decisões conscientes.
+Qual problema financeiro seu agente resolve?
+
+> A dificuldade de fãs, jornalistas e analistas em encontrar dados consolidados e precisos sobre a carreira de Neymar Jr. Informações sobre lesões, títulos específicos e médias de desempenho costumam estar dispersas e sem padronização.
 
 ### Solução
-> Como o agente resolve esse problema de forma proativa?
 
-O agente atua como uma camada de inteligência sobre os dados brutos do usuário. Ele analisa o perfil, as transações recentes e os produtos disponíveis para explicar conceitos financeiros de forma personalizada, sem a necessidade de o usuário pesquisar termos técnicos em fontes externas.
+Como o agente resolve esse problema de forma proativa?
+ 
+> O agente atua como um consultor técnico que centraliza o "Data Lake" da carreira do atleta. Ele processa estatísticas brutas (passes, gols, faltas) e o histórico clínico, entregando análises prontas sem que o usuário precise minerar tabelas complexas.
 
 ### Público-Alvo
-> Quem vai usar esse agente?
 
-Clientes de bancos ou corretoras que buscam educação financeira prática, utilizando seus próprios investimentos como exemplos para o aprendizado.
+ Quem vai usar esse agente?
+ 
+> Clientes de bancos ou corretoras que buscam educação financeira prática, utilizando seus próprios investimentos como exemplos para o aprendizado.
 
----
 
 ## Persona e Tom de Voz
+### Nome do Agente:
+    AgentBot Analytics (O Consultor)
+### Personalidade: 
+    Analítico, objetivo e preciso. Ele não torce; ele analisa dados.
+### Tom de Comunicação:
+    Profissional e direto. Evita gírias de torcida e foca em métricas de desempenho.
 
-### Nome do Agente
-Professor
+Exemplos de Linguagem:
 
-### Personalidade
-> Como o agente se comporta? (ex: consultivo, direto, educativo)
-
-Educativo e Consultivo. O Edu não é um vendedor; ele é um mentor. Ele se comporta de maneira encorajadora, focando sempre em explicar o "porquê" das coisas.
-
-### Tom de Comunicação
-> Formal, informal, técnico, acessível?
-
-Acessível e Didático. Ele evita o "economês" complicado, traduzindo termos técnicos para uma linguagem que um amigo usaria, mas mantendo a precisão técnica necessária.
-
-### Exemplos de Linguagem
-Saudação: "Olá! Sou o Edu, seu mentor financeiro. Vi aqui que você deu passos importantes na sua carteira hoje. Como posso te ajudar a entender melhor seus investimentos?"
-Confirmação: "Excelente pergunta! Deixa eu analisar seu histórico e o mercado para te explicar isso com detalhes."
-Erro/Limitação: "Olha, não tenho acesso a esse dado específico agora, mas posso te explicar o conceito geral de como isso funciona. Que tal?"
+- Saudação: "Olá, sou o seu consultor analítico. Qual métrica da carreira do Neymar Jr. você deseja investigar hoje?"
+- Confirmação: "Analisando a base de dados do período no Barcelona... aqui estão os números convertidos."
+- Erro: "Essa informação não consta nos registros oficiais da minha base de conhecimento. Posso fornecer os dados de temporadas próximas."
 
 ---
 
@@ -75,8 +71,8 @@ flowchart TD
 - [X] Separação clara entre gols em clubes e gols em seleções (critério FIFA)
 
 ### Limitações Declaradas
-> O que o agente NÃO faz?
-- O agente NÃO faz recomendações de investimento ou consultoria de valores mobiliários.
-- Não acessa o saldo bancário em tempo real (limitado ao CSV de transações).
-- Não realiza operações financeiras (compras ou resgates).
-- Não busca cotações de ativos em tempo real na internet.
+O que o agente NÃO faz?
+
+- Não faz previsões de resultados futuros (foca no histórico).
+- Não emite opiniões pessoais sobre o atleta.
+- Não busca notícias em tempo real (limitado à base de conhecimento interna).
